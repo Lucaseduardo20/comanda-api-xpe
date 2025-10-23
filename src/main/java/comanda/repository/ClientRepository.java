@@ -1,11 +1,11 @@
 package com.lucas.comanda.repository;
 
-import com.lucas.comanda.model.Cliente;
+import com.lucas.comanda.model.Client;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface ClienteRepository extends JpaRepository<Cliente, Long> {
-    List<Cliente> findByNome(String nome);
+public interface ClientRepository extends JpaRepository<Client, Long> {
+    List<Client> findByNome(String nome);
 }

@@ -2,7 +2,7 @@ package com.lucas.comanda.model;
 
 import jakarta.persistene.*;
 
-public class Cliente {
+public class Client {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
