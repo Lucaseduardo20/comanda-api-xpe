@@ -12,32 +12,36 @@ import java.util.List;
 @RequestMapping("/clients")
 public class ClientController {
     @Autowired
-    private clientService clientService;
+    private ClientService clientService;
 
     @GetMapping
     public List<Client> listAll() {
-        return clientService.listAll();
+        return clientService.list();
     }
 
-    @GetMapping("find/{id}")
+    @GetMapping("/find/{id}")
     public ResponseEntity<Client> find(@PathVariable Long id) {
-        return clientService.findById(id)
+        return clientService.find(id)
             .map(ResponseEntity::ok)
             .orElse(ResponseEntity.notFound().build());
     }
 
-    @GetMapping("/nome/${name}")
+    @GetMapping("/name/{name}")
     public List<Client> findByName(@PathVariable String name) {
-        return clientService.findByName(name)
-            .map(ResponseEntity::ok)
-            .orElse(ResponseEntity.notFound().build());
+        return clientService.findByName(name);
+    }
+    @GetMapping("/count")
+    public long count() {
+        return clientService.count();
     }
 
-    public long count() {
-        return clientService
+    @PostMapping
+    public Client save(@RequestBody Client client) {
+        return clientService.save(client);
     }
     
-    public void delete(Long id) {
-        return clientService.delete(id).
+    @DeleteMapping("/{id}")
+    public void delete(@PathVariable Long id) {
+        clientService.delete(id);
     }
 }

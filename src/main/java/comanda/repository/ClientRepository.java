@@ -7,5 +7,5 @@ import java.util.List;
 
 @Repository
 public interface ClientRepository extends JpaRepository<Client, Long> {
-    List<Client> findByNome(String nome);
+    List<Client> findByName(String name);
 }

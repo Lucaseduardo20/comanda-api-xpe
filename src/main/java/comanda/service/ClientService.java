@@ -8,31 +8,32 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.Optional;
 
+@Service
 public class ClientService {
     @Autowired
-    private ClientRepository ClientRepository;
+    private ClientRepository clientRepository;
 
     public List<Client> list() {
-        return ClientRepository.findAll();
+        return clientRepository.findAll();
     }
 
     public Optional<Client> find(Long id) {
-        return ClientRepository.findById(id);
+        return clientRepository.findById(id);
     }
 
     public List<Client> findByName(String name) {
         return clientRepository.findByName(name);
     }
 
-    public Client save(Client Client) {
-        return clientRepository.save(Client);
+    public Client save(Client client) {
+        return clientRepository.save(client);
     }
 
     public void delete(Long id) {
-        return ClientRepository.deleteById(id);
+        clientRepository.deleteById(id);
     }
 
     public long count() {
-        return ClientRepository.count();
+        return clientRepository.count();
     }
 }
