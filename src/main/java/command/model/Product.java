@@ -1,4 +1,4 @@
-package com.lucas.comanda.model;
+package com.lucas.command.model;
 
 import jakarta.persistence.*;
 
@@ -8,7 +8,7 @@ public class Product {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private Float price;
+    private Double price;
     private String name;
     private String description;
 
@@ -21,6 +21,6 @@ public class Product {
     public String getDescription() { return description; }
     public void setDescription(String description) { this.description = description; }
 
-    public Float getPrice() { return price; }
-    public void setPrice(Float price) { this.price = price; }
+    public Double getPrice() { return price; }
+    public void setPrice(Double price) { this.price = price; }
 }

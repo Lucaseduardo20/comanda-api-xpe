@@ -1,7 +1,7 @@
-package com.lucas.comanda.controller;
+package com.lucas.command.controller;
 
-import com.lucas.comanda.model.Product;
-import com.lucas.comanda.service.ProductService;
+import com.lucas.command.model.Product;
+import com.lucas.command.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

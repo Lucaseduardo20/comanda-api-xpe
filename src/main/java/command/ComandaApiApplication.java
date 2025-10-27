@@ -1,4 +1,4 @@
-package com.lucas.comanda;
+package com.lucas.command;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

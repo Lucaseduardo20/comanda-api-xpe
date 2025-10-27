@@ -1,4 +1,4 @@
-package com.lucas.comanda.model;
+package com.lucas.command.model;
 
 import jakarta.persistence.*;
 

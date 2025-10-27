@@ -1,7 +1,7 @@
-package com.lucas.comanda.service;
+package com.lucas.command.service;
 
-import com.lucas.comanda.repository.ProductRepository;
-import com.lucas.comanda.model.Product;
+import com.lucas.command.repository.ProductRepository;
+import com.lucas.command.model.Product;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

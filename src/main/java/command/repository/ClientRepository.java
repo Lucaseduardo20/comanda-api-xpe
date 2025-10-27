@@ -1,6 +1,6 @@
-package com.lucas.comanda.repository;
+package com.lucas.command.repository;
 
-import com.lucas.comanda.model.Client;
+import com.lucas.command.model.Client;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 import java.util.List;
